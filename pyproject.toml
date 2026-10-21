@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "leap"
+version = "1.0.0"
+description = "Action learning for scientific simulations"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "torch>=2.1",
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+md = [
+    "openmm==8.3.1",
+    "openmm-cuda-12==8.3.1; sys_platform == 'linux' and platform_machine == 'x86_64'",
+    "openmmtools>=0.26",
+    "mdtraj>=1.11",
+]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+include = ["leap*", "experiments*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--import-mode=importlib"

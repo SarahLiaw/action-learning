@@ -1,0 +1,118 @@
+{
+  "study": "audit",
+  "seed": 42,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "inputs": {
+    "data": "{out}/data/T{temperature}",
+    "reuse": "{out}/reuse/T{temperature}/seed{seed}",
+    "preference": "{out}/preference/T{temperature}/seed{seed}",
+    "composed": "{out}/composed"
+  },
+  "sets": [
+    "reuse_T500",
+    "reuse_T600",
+    "preference",
+    "landscape",
+    "route",
+    "composed"
+  ],
+  "realizer": {
+    "torsion_k": 20000.0,
+    "base_tolerance": 1.0,
+    "base_iterations": 1000,
+    "tolerance": 0.1,
+    "iterations": 1500,
+    "max_error_deg": 0.5,
+    "overlap_ratio": 0.6
+  },
+  "min_steps": 8,
+  "population_methods": [
+    "interpolation",
+    "reference",
+    "untrained",
+    "velocity",
+    "binary_nre",
+    "leap",
+    "ddpm",
+    "flow_matching",
+    "heldout_observed"
+  ],
+  "role_tasks": {
+    "representative_completion": [
+      "completion_fence"
+    ],
+    "constraint_change": [
+      "endpoints",
+      "endpoints_fence"
+    ],
+    "high_energy_stress": [
+      "endpoints",
+      "endpoints_fence"
+    ]
+  },
+  "reuse_methods": [
+    "leap",
+    "reference",
+    "ddpm",
+    "flow_matching"
+  ],
+  "preference": {
+    "temperature": 600,
+    "tasks": {
+      "representative_completion": [
+        "completion",
+        "endpoints",
+        "endpoints_fence"
+      ],
+      "constraint_change": [
+        "endpoints",
+        "endpoints_fence"
+      ]
+    },
+    "role": "representative_completion",
+    "weights": {
+      "leap": [
+        0,
+        5,
+        20,
+        50
+      ],
+      "reference": [
+        0,
+        50
+      ],
+      "ddpm": [
+        0,
+        50
+      ],
+      "flow_matching": [
+        0,
+        50
+      ]
+    }
+  },
+  "keys": {
+    "landscape": [
+      "T500__completion__leap",
+      "T500__completion__ddpm",
+      "T500__completion__flow_matching",
+      "T600__completion__leap",
+      "T600__completion__ddpm",
+      "T600__completion__flow_matching",
+      "T500__observed",
+      "T600__observed",
+      "T600__endpoints__leap",
+      "T600__constraint_endpoints",
+      "T600__constraint_endpoints_fence",
+      "T600__preference_lambda0",
+      "T600__preference_lambda20"
+    ],
+    "route": [
+      "checked_constrained"
+    ]
+  }
+}

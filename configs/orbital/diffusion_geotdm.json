@@ -1,0 +1,17 @@
+{
+ "name": "diffusion_geotdm",
+ "kind": "geotdm",
+ "paper": "Table 12: GeoTDM objective differences",
+ "bundle": "planetary_m31_steps32_seed20260726_v1.pt",
+ "seeds": [11, 23, 37],
+ "epochs": 150,
+ "batch_size": 8,
+ "learning_rate": 0.0001,
+ "hidden": 128,
+ "n_layers": 6,
+ "n_layers_ref": 2,
+ "time_emb_dim": 32,
+ "timesteps": 1000,
+ "draws": 256,
+ "eval_batch_size": 16
+}

@@ -1,0 +1,11 @@
+{
+ "name": "calibrate_matched_n256",
+ "kind": "calibrate",
+ "horizons": "horizons_42body_monthly_1980_2013.npz",
+ "rule": "auroc",
+ "body_counts": [31, 42],
+ "contexts": [0, 48],
+ "target": 0.7308,
+ "num_steps": 256,
+ "seed": 314159
+}

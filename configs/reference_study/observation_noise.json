@@ -1,0 +1,5 @@
+{
+  "description": "Gaussian observation noise after the initial frame (observation robustness, Appendix D).",
+  "base": "default.json",
+  "settings": [{"obs_noise": 0.0}, {"obs_noise": 0.01}, {"obs_noise": 0.02}, {"obs_noise": 0.05}, {"obs_noise": 0.1}]
+}

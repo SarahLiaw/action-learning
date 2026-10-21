@@ -1,0 +1,33 @@
+{
+  "study": "transfer",
+  "temperatures": [
+    500,
+    600
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "inputs": {
+    "data": "{out}/data/T{temperature}",
+    "checkpoints": "{out}/runs/T{temperature}/seed{seed}/checkpoints.json"
+  },
+  "event": {
+    "horizon": 200,
+    "grace": 5
+  },
+  "reference": {
+    "gamma": 15.0,
+    "epsilon_factor": 2.0
+  },
+  "methods": [
+    "leap",
+    "binary_nre",
+    "velocity",
+    "untrained"
+  ],
+  "references": 32,
+  "bank_seed": 260924,
+  "chunk": 128
+}

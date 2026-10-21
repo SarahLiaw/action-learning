@@ -1,0 +1,30 @@
+{
+  "description": "Paper default: unconditioned double well, zero-drift reference with D_ref=0.20, K=4, three repetitions.",
+  "seeds": [17, 29, 43],
+  "config": {
+    "n_train": 256,
+    "n_val": 96,
+    "n_test": 128,
+    "n_steps": 24,
+    "dt": 0.04,
+    "D_data": 0.12,
+    "x0_mean": -0.8,
+    "x0_std": 0.15,
+    "substeps": 1,
+    "obs_noise": 0.0,
+    "D_ref": 0.2,
+    "a_ref": 0.0,
+    "K": 4,
+    "eval_K": 4,
+    "epochs": 60,
+    "batch_size": 64,
+    "lr": 0.002,
+    "weight_decay": 1e-05,
+    "hidden": 48,
+    "depth": 2,
+    "patience": 12,
+    "min_delta": 1e-05,
+    "grad_clip": 5.0,
+    "residual_l2": 0.0001
+  }
+}

@@ -1,0 +1,22 @@
+{
+ "name": "transfer_k16",
+ "kind": "transfer",
+ "paper": "not in the paper (additional study)",
+ "source": "transfer_source_k16",
+ "method": "leap_global",
+ "model": {
+  "hidden": 96,
+  "body_embed": 16,
+  "max_bodies": 64,
+  "chunk": 64
+ },
+ "targets": {
+  "m31_n32": "matched_m31_steps32_v1.pt",
+  "m31_n64": "matched_m31_steps64_v1.pt",
+  "m31_n128": "matched_m31_steps128_v1.pt",
+  "m31_n256": "matched_m31_steps256_v1.pt",
+  "m42_n32": "matched_m42_steps32_v1.pt",
+  "m42_n64": "matched_m42_steps64_v1.pt"
+ },
+ "eval_batch_size": 8
+}

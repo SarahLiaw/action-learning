@@ -1,0 +1,5 @@
+{
+  "description": "Observed step size at fixed horizon T=0.96 (Table 8).",
+  "base": "default.json",
+  "settings": [{"dt": 0.02, "n_steps": 48}, {"dt": 0.04, "n_steps": 24}, {"dt": 0.08, "n_steps": 12}]
+}

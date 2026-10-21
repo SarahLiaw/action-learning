@@ -1,0 +1,5 @@
+{
+  "description": "Supplied reference drift b_ref = a_ref * b at D_ref=0.20 (Table 7).",
+  "base": "default.json",
+  "settings": [{"a_ref": 0.25}, {"a_ref": 0.5}, {"a_ref": 0.75}, {"a_ref": 1.0}]
+}

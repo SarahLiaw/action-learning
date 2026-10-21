@@ -1,0 +1,5 @@
+{
+  "description": "Training references per data path; evaluation keeps four (reference budget, Appendix D).",
+  "base": "default.json",
+  "settings": [{"K": 1}, {"K": 2}, {"K": 4}, {"K": 8}, {"K": 16}, {"K": 32}]
+}

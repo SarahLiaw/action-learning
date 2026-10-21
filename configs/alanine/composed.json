@@ -1,0 +1,77 @@
+{
+  "study": "composed",
+  "temperature": 600,
+  "seed": 42,
+  "temperatures": [
+    500,
+    600
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "inputs": {
+    "data": "{out}/data/T{temperature}",
+    "checkpoints": "{out}/runs/T{temperature}/seed{seed}/checkpoints.json",
+    "reuse": "{out}/reuse/T{temperature}/seed{seed}",
+    "preference": "{out}/preference/T{temperature}/seed{seed}",
+    "audit": "{out}/audit"
+  },
+  "event": {
+    "horizon": 200,
+    "grace": 5
+  },
+  "reference": {
+    "gamma": 15.0,
+    "epsilon_factor": 2.0
+  },
+  "examples": {
+    "min_steps": 12,
+    "centers_deg": [
+      [
+        -86.0,
+        68.0
+      ],
+      [
+        50.0,
+        -50.0
+      ]
+    ],
+    "min_change_deg": 5.0
+  },
+  "route": {
+    "margin": 0.0001,
+    "steps": 1800,
+    "lr": 0.02
+  },
+  "requests": {
+    "margin": 0.0001,
+    "steps": 1800,
+    "lr": 0.02,
+    "weights": [
+      0,
+      20,
+      50
+    ],
+    "center_deg": [
+      -60,
+      -40
+    ],
+    "width_deg": 30,
+    "waypoint_fraction": 0.5
+  },
+  "display": {
+    "landscape_weights": [
+      0,
+      20
+    ],
+    "preference_only": 20,
+    "sweep_weights": [
+      0,
+      5,
+      20,
+      50
+    ]
+  }
+}

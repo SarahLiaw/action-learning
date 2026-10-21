@@ -1,0 +1,24 @@
+{
+ "name": "capacity_leap_local_w192",
+ "paper": "not in the paper (additional study)",
+ "bundle": "matched_m31_steps32_v1.pt",
+ "method": "leap_local",
+ "seeds": [11, 23, 37],
+ "train": {
+  "epochs": 100,
+  "batch_size": 16,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "grad_clip": 1.0,
+  "patience": 20,
+  "K": 4,
+  "global_l2": 0.0
+ },
+ "model": {
+  "hidden": 192,
+  "body_embed": 16,
+  "max_bodies": 64,
+  "chunk": 64
+ },
+ "eval_batch_size": 16
+}

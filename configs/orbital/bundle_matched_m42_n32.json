@@ -1,0 +1,11 @@
+{
+ "name": "bundle_matched_m42_n32",
+ "kind": "bundle",
+ "file": "matched_m42_steps32_v1.pt",
+ "horizons": "horizons_42body_monthly_1980_2013.npz",
+ "eta": 9.66833216270101e-05,
+ "bundle": {
+  "body_count": 42,
+  "num_steps": 32
+ }
+}

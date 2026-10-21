@@ -1,0 +1,22 @@
+{
+ "name": "nre_endpoint_gaussian_mle",
+ "paper": "not in the paper (additional study)",
+ "bundle": "planetary_m31_steps32_seed20260726_v1.pt",
+ "method": "endpoint_gaussian_mle",
+ "seeds": [11, 23, 37],
+ "train": {
+  "epochs": 100,
+  "batch_size": 8,
+  "learning_rate": 0.0003,
+  "weight_decay": 0.0001,
+  "grad_clip": 1.0,
+  "patience": 20
+ },
+ "model": {
+  "hidden": 96,
+  "body_embed": 16,
+  "max_bodies": 64,
+  "chunk": 64
+ },
+ "eval_batch_size": 8
+}

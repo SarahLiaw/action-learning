@@ -1,0 +1,56 @@
+{
+  "study": "preference",
+  "temperature": 600,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "inputs": {
+    "data": "{out}/data/T{temperature}",
+    "checkpoints": "{out}/runs/T{temperature}/seed{seed}/checkpoints.json",
+    "preference": "{out}/preference/T{temperature}/seed{seed}"
+  },
+  "event": {
+    "horizon": 200,
+    "grace": 5
+  },
+  "reference": {
+    "gamma": 15.0,
+    "epsilon_factor": 2.0
+  },
+  "actions": [
+    "leap",
+    "untrained"
+  ],
+  "generators": [
+    "ddpm",
+    "flow_matching"
+  ],
+  "weights": [
+    0,
+    5,
+    20,
+    50
+  ],
+  "center_deg": [
+    -60,
+    -40
+  ],
+  "width_deg": 30,
+  "starts": 8,
+  "steps": 400,
+  "lr": 0.035,
+  "clip": 10.0,
+  "noise": 0.15,
+  "start_seed_offset": 18000,
+  "generator_seed_offset": 19000,
+  "generator_chunk": 64,
+  "summary_methods": [
+    "leap",
+    "reference",
+    "untrained",
+    "ddpm",
+    "flow_matching"
+  ]
+}

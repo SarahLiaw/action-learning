@@ -1,0 +1,5 @@
+{
+  "description": "Reference diffusion at zero reference drift (Table 7).",
+  "base": "default.json",
+  "settings": [{"D_ref": 0.06}, {"D_ref": 0.12}, {"D_ref": 0.2}, {"D_ref": 0.32}, {"D_ref": 0.48}]
+}

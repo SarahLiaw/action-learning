@@ -1,0 +1,11 @@
+{
+ "name": "bundle_matched_m31_n64",
+ "kind": "bundle",
+ "file": "matched_m31_steps64_v1.pt",
+ "horizons": "horizons_42body_monthly_1980_2013.npz",
+ "eta": 6.62657415766232e-05,
+ "bundle": {
+  "body_count": 31,
+  "num_steps": 64
+ }
+}

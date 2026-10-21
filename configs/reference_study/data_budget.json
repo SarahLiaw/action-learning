@@ -1,0 +1,5 @@
+{
+  "description": "Training paths at K=4 (data budget, Appendix D).",
+  "base": "default.json",
+  "settings": [{"n_train": 32}, {"n_train": 64}, {"n_train": 128}, {"n_train": 256}]
+}

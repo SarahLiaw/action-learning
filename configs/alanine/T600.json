@@ -1,0 +1,87 @@
+{
+  "study": "reuse",
+  "temperature": 600,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "inputs": {
+    "raw": "{out}/simulations/T{temperature}",
+    "data": "{out}/data/T{temperature}",
+    "checkpoints": "{out}/runs/T{temperature}/seed{seed}/checkpoints.json",
+    "reuse": "{out}/reuse/T{temperature}/seed{seed}"
+  },
+  "simulation": {
+    "replicas": 8,
+    "seed": 612345,
+    "friction_ps": 10.0,
+    "timestep_fs": 1.0,
+    "total_steps": 50000000,
+    "save_every": 100,
+    "checkpoint_every": 5000000,
+    "platform": "CUDA",
+    "precision": "mixed"
+  },
+  "data": {
+    "splits": {
+      "train": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "validation": [
+        6
+      ],
+      "test": [
+        7
+      ]
+    },
+    "drift_bins": 50,
+    "min_count": 10
+  },
+  "event": {
+    "horizon": 200,
+    "grace": 5
+  },
+  "reference": {
+    "gamma": 15.0,
+    "epsilon_factor": 2.0
+  },
+  "actions": {
+    "steps": 1200,
+    "batch": 32,
+    "velocity_batch": 512,
+    "lr": 0.0003,
+    "weight_decay": 1e-05,
+    "bank": 32,
+    "negatives": 8,
+    "validation_references": 8,
+    "residual_penalty": 0.01,
+    "clip": 5.0,
+    "eval_every": 100
+  },
+  "generators": {
+    "steps": 3000,
+    "continuation_steps": 9000,
+    "batch": 64,
+    "lr": 0.0003,
+    "weight_decay": 1e-05,
+    "clip": 5.0,
+    "eval_every": 200,
+    "validation_seed": 701,
+    "validation_repeats": 4
+  },
+  "inference": {
+    "candidates": 8,
+    "steps": 400,
+    "lr": 0.035,
+    "clip": 10.0,
+    "noise": 0.15,
+    "start_seed_offset": 8000,
+    "generator_seed_offset": 9000
+  }
+}
