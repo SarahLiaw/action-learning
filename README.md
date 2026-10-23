@@ -51,20 +51,6 @@ action = lambda p: -reference.log_prob(p) - model(p)                           #
 path = optimize_path(action, init, fixed)                                      # most likely path, Eq. 14
 ```
 
-## Reproducing the paper
-
-Each experiment has a short guide with the commands for its tables and figures.
-
-| Experiment | Paper |
-|---|---|
-| [Double well](experiments/double_well) | Section 4.1, Appendix C |
-| [Reference choice and robustness](experiments/reference_study) | Section 4.1, Appendix D |
-| [Orbital system](experiments/orbital) | Section 4.2, Appendix E |
-| [Alanine dipeptide](experiments/alanine) | Section 4.3, Appendix F |
-
-The objective and its building blocks live in [`leap/`](leap) and the paper settings in [`configs/`](configs). The
-SLURM templates in [`slurm/`](slurm) need your account and partition filled in.
-
 ## Citation
 
 ```bibtex
