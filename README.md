@@ -1,6 +1,6 @@
 # Action Learning for Scientific Simulations
 
-#### [[Project page]](https://sarahliaw.github.io/action-learning/)
+#### [[Paper]](https://arxiv.org/abs/2610.31585v1) [[Project page]](https://sarahliaw.github.io/action-learning/)
 
 [Sarah Liaw](https://sarahliaw.github.io/), [Yuanqi Du](https://yuanqidu.github.io/), [Yilun Du](https://yilundu.github.io/)
 
@@ -68,10 +68,13 @@ SLURM templates in [`slurm/`](slurm) need your account and partition filled in.
 ## Citation
 
 ```bibtex
-@article{liaw2026action,
-  author  = {Liaw, Sarah and Du, Yuanqi and Du, Yilun},
-  title   = {Action Learning for Scientific Simulations},
-  journal = {arXiv preprint},
-  year    = {2026},
+@misc{liaw2026actionlearningscientificsimulations,
+      title={Action Learning for Scientific Simulations},
+      author={Sarah Liaw and Yuanqi Du and Yilun Du},
+      year={2026},
+      eprint={2610.31585},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2610.31585},
 }
 ```
